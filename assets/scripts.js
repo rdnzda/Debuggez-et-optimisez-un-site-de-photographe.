@@ -13,3 +13,11 @@ $(document).ready(function() {
         tagsPosition: 'top'
     });
 });
+
+const navItems = document.querySelectorAll('.nav-item li');
+navItems.forEach(bouton => {
+    bouton.addEventListener('click', function() {
+        navItems.forEach(b => b.classList.remove('nav-link.active'));
+        bouton.classList.add('nav-link.active');
+    });
+});
